@@ -5,29 +5,34 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme             : "mmistakes/minimal-mistakes@4.20.2"
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-minimal_mistakes_skin    : "contrast" #"default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "Seungha's Blog"
-title_separator          : "-"
-subtitle                 : "-"
-name                     : &name "Seungha Lee" # &name is a YAML anchor which can be *referenced later
-description              : &description "내가 공부한 모든 것들을 남겨놓는 블로그"
-url                      : https://seunghalee1226.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : ""
+title_separator          : ""
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Seungha Lee"
+description              : "읽고 기록하기"
+url                      : "https://seunghalee1226.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
+repository               : "seunghalee1226" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "false" # false (default), "disqus", "discourse", "facebook", "staticman_v2", "staticman", "utterances", "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            :
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -38,66 +43,74 @@ comments:
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                : # "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
-  secret                 : # "PznnZGu3P6eTHRPLORniSq+J61YEf+A9zmColXDM5icqF49gbunH51B8+h+i2IvewpuxtA9TFoK68TuhUp/X3YKmmqhXasegHYabY50fqF9nJh9npWNhvITdkQHeaOqnFXUIwxfiEeUt49Yoa2waRR7a5LdRAP3SVM8hz0KIBT4="
-
+  siteKey                :
+  secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : algolia # lunr (default), algolia
+search                   : # true, false (default)
+search_full_content      : # true, false (default)
+search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
   search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : true # true (default), false
-  files_to_exclude:
-
+  powered_by             : # true (default), false
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
 # SEO Related
-google_site_verification :  # Replace this with your ID, or delete
+google_site_verification :
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : 
+  username               :
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles, used in _includes/seo.html
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
-
 # Analytics
 analytics:
   provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :  # Replace this with your ID, or delete
-    anonymize_ip         : 
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : ""
-  bio              : "To be a *Data engineer*."
+  name             : "Lee, Seungha"
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "배운것을 읽고 기록하는 사람입니다"
   location         : "Republic of Korea"
+  email            :
   links:
     - label: "Email"
-      icon: ""fab fa-google"
-      url: "seungha.lee1226@gmail.com"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:seunghal.lee1226@email.com"
     - label: "LinkedIn"
-      icon: "fab fa-linkedin-in""
+      icon: "fab fa-linkedin-in"
       url: "https://www.linkedin.com/in/seungha-lee-995745185/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/seunghalee1226"
@@ -105,19 +118,18 @@ author:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/oreoreo1226"
 
-
 # Site Footer
 footer:
   links:
     - label: "LinkedIn"
-      icon: "fab fa-linkedin-in""
-      url: "https://www.linkedin.com/in/seungha-lee-995745185/"
+      icon: "fab fa-linkedin-in"
+      url: "https://www.linkedin.com/in/seungha-lee-995745185/"   
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/seunghalee"
+      url: "https://github.com/seunghalee1226"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/oreoreo1226"
+      url:"https://instagram.com/oreoreo1226"
 
 
 # Reading Files
@@ -145,9 +157,12 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -175,93 +190,17 @@ kramdown:
   enable_coderay: false
 
 
-# Collections
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:path/
-  recipes:
-    output: true
-    permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _docs
-  - scope:
-      path: ""
-      type: docs
-    values:
-      layout: single
-      read_time: false
-      author_profile: false
-      share: false
-      comments: false
-      sidebar:
-        nav: "docs"
-  # _recipes
-  - scope:
-      path: ""
-      type: recipes
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _pets
-  - scope:
-      path: ""
-      type: pets
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
-
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -270,7 +209,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -279,7 +217,6 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 
@@ -313,8 +250,23 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
