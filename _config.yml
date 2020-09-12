@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Seungha LEe"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **Data Engineers**."
+  bio              : "I am a **Data Engineer**."
   location         : "Republic of Korea"
   email            :
   links:
